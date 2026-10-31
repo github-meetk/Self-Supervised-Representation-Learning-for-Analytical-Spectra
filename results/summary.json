@@ -1,0 +1,101 @@
+[
+  {
+    "source": "synthetic",
+    "method": "autoencoder+logreg",
+    "condition": "label_efficiency",
+    "level": 0.1,
+    "accuracy_mean": 0.6666666666666666,
+    "accuracy_ci95": 0.0,
+    "macro_f1_mean": 0.5555555555555555,
+    "macro_f1_ci95": 0.0,
+    "n": 5
+  },
+  {
+    "source": "synthetic",
+    "method": "autoencoder+logreg",
+    "condition": "label_efficiency",
+    "level": 1.0,
+    "accuracy_mean": 0.6666666666666666,
+    "accuracy_ci95": 0.0,
+    "macro_f1_mean": 0.5555555555555555,
+    "macro_f1_ci95": 0.0,
+    "n": 5
+  },
+  {
+    "source": "synthetic",
+    "method": "autoencoder+logreg",
+    "condition": "noise",
+    "level": 10.0,
+    "accuracy_mean": 0.6190476190476191,
+    "accuracy_ci95": 0.11061622073262832,
+    "macro_f1_mean": 0.5954948571666838,
+    "macro_f1_ci95": 0.12729273125990592,
+    "n": 5
+  },
+  {
+    "source": "synthetic",
+    "method": "autoencoder+logreg",
+    "condition": "noise",
+    "level": 20.0,
+    "accuracy_mean": 0.5619047619047619,
+    "accuracy_ci95": 0.026442334335217095,
+    "macro_f1_mean": 0.4929292929292929,
+    "macro_f1_ci95": 0.019631430036752082,
+    "n": 5
+  },
+  {
+    "source": "synthetic",
+    "method": "autoencoder+logreg",
+    "condition": "transfer",
+    "level": 1.0,
+    "accuracy_mean": 0.6666666666666666,
+    "accuracy_ci95": 0.0,
+    "macro_f1_mean": 0.5555555555555555,
+    "macro_f1_ci95": 0.0,
+    "n": 5
+  },
+  {
+    "source": "synthetic",
+    "method": "pca+rf",
+    "condition": "label_efficiency",
+    "level": 0.1,
+    "accuracy_mean": 0.38095238095238093,
+    "accuracy_ci95": 0.04180900157548021,
+    "macro_f1_mean": 0.2839682539682539,
+    "macro_f1_ci95": 0.06324700770432831,
+    "n": 5
+  },
+  {
+    "source": "synthetic",
+    "method": "pca+rf",
+    "condition": "label_efficiency",
+    "level": 1.0,
+    "accuracy_mean": 0.43809523809523804,
+    "accuracy_ci95": 0.02644233433521713,
+    "macro_f1_mean": 0.3385391583533998,
+    "macro_f1_ci95": 0.026631078207750954,
+    "n": 5
+  },
+  {
+    "source": "synthetic",
+    "method": "pls-da",
+    "condition": "label_efficiency",
+    "level": 0.1,
+    "accuracy_mean": 0.5047619047619047,
+    "accuracy_ci95": 0.06741498938010833,
+    "macro_f1_mean": 0.45800630169051226,
+    "macro_f1_ci95": 0.08428092744428065,
+    "n": 5
+  },
+  {
+    "source": "synthetic",
+    "method": "pls-da",
+    "condition": "label_efficiency",
+    "level": 1.0,
+    "accuracy_mean": 0.38095238095238093,
+    "accuracy_ci95": 0.0,
+    "macro_f1_mean": 0.27777777777777773,
+    "macro_f1_ci95": 0.0,
+    "n": 5
+  }
+]

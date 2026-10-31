@@ -1,0 +1,23 @@
+data:
+  source: synthetic
+  n_classes: 3
+  n_per_class: 18
+  n_points: 128
+  seed: 7
+preprocessing:
+  baseline: true
+  smoothing: true
+  window_length: 7
+  polyorder: 2
+  normalization: snv
+model:
+  embedding_dim: 16
+  epochs: 2
+  batch_size: 16
+  learning_rate: 0.002
+  patience: 1
+evaluation:
+  seeds: 5
+  label_fractions: [0.1, 1.0]
+  noise_snr_db: [20, 10]
+  output_dir: results
