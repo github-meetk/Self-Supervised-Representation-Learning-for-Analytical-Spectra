@@ -6,9 +6,9 @@ from pathlib import Path
 
 import numpy as np
 import torch
+from sklearn.linear_model import LogisticRegression
 from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
-from sklearn.linear_model import LogisticRegression
 
 from .data.loader import load_dataset
 from .models.cnn1d import ConvAutoencoder
