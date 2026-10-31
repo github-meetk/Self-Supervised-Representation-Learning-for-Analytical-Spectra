@@ -42,6 +42,7 @@ def run_evaluation(config: dict) -> Path:
     model = load_encoder(checkpoint)
     with torch.no_grad():
         Z = model.encode(torch.from_numpy(X)).numpy()
+    np.savez(out / "embeddings.npz", embeddings=Z, labels=y, source=source)
     rows = []
     for seed in range(config["evaluation"]["seeds"]):
         seed_everything(seed)

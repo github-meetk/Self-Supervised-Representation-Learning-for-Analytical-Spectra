@@ -41,7 +41,19 @@ def make_report(output_dir: str = "results") -> None:
     ax.set(title=f"Transfer comparison ({source})", ylabel="Accuracy"); fig.tight_layout()
     fig.savefig(figdir / "transfer.png"); plt.close(fig)
     fig, ax = plt.subplots()
-    rng = np.random.default_rng(1)
-    ax.scatter(rng.normal(size=100), rng.normal(size=100), s=8)
+    embedding_file = out / "embeddings.npz"
+    if embedding_file.exists():
+        payload = np.load(embedding_file)
+        points = payload["embeddings"]
+        if points.shape[1] > 2:
+            try:
+                import umap
+                points = umap.UMAP(n_components=2, random_state=1).fit_transform(points)
+            except ImportError:
+                points = points[:, :2]
+        for label in np.unique(payload["labels"]):
+            mask = payload["labels"] == label
+            ax.scatter(points[mask, 0], points[mask, 1], s=10, label=str(label))
+        ax.legend(title="class")
     ax.set(title=f"Embedding overview ({source})", xlabel="UMAP-1", ylabel="UMAP-2"); fig.tight_layout()
     fig.savefig(figdir / "embedding.png"); plt.close(fig)
